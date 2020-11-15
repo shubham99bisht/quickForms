@@ -1,0 +1,108 @@
+.section-bg {background-color: #f4fbfe;}
+section{padding: 60px 0px;}
+.center {margin: auto;}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: #49b5e7;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.back-to-top i:hover {
+  background: #1da2e0;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 10px 40px 10px;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.services .icon-box:hover {
+  transform: translateY(-5px);
+}
+
+.services .icon {
+  position: absolute;
+  left: -20px;
+  top: calc(50% - 30px);
+}
+
+.services .icon i {
+  font-size: 64px;
+  line-height: 1;
+  transition: 0.5s;
+}
+
+.services .title {
+  margin-left: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .title a {
+  color: #111;
+}
+
+.services .icon-box:hover .title a {
+  color: #49b5e7;
+}
+
+.services .description {
+  font-size: 14px;
+  margin-left: 40px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.services{
+  padding-top: 80px;
+}
+
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+
+#hero{
+  padding-top: 50px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 700px){
+  #hero{
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+  .services{
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+}
