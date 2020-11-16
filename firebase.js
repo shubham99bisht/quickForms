@@ -51,7 +51,7 @@ function writeUserData(path, data) {
 
 
 function defaultCallback(data) {
-    alert("callbackFunction passed wasn't and instanceof Function, falling to defaultCallback");
+    alert("callbackFunction passed wasn't an instanceof Function, falling to defaultCallback");
     console.log(data);
 }
 

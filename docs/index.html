@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>quickForms - Secure & Simple Forms</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
 
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -88,29 +88,33 @@
                 <h3>quickForms - Demo Form</h3>
               </div>
               <div class="card-body">
-                <form>
+                <form action="" method="post" class="form" id="contactform">
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label>Name</label>
-                      <input type="text" class="form-control">
+                      <input type="text" name="name" class="form-control">
                     </div>
                     <div class="form-group col-md-6">
                       <label>Contact</label>
-                      <input type="number" class="form-control">
+                      <input type="number" name="contact" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
                     <small id="emailHelp" class="form-text text-muted">Will be visible publicly, enter dummy data.</small>
                   </div>
                   <div class="form-group">
                     <label>Your Message</label>
-                    <textarea class="form-control" placeholder="Please enter your message or query." rows="3"></textarea>
+                    <textarea class="form-control" name="message" placeholder="Please enter your message or query." rows="3"></textarea>
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                  <button type="submit" class="btn btn-primary" disabled>See Responses</button>
                 </form>
+                <p>
+                  <button class="btn btn-primary" onclick="addContactData('contactform')">Submit</button>
+                  <a class="btn btn-primary" href="responses.html" target="_blank">See Responses</a>
+                  &nbsp;
+                  powered by <a href="https://shubham99bisht.github.io/quickForms" target="_blank"><b style="background-color:blue;color:white">&nbsp; quickForms &nbsp;</b></a>
+                </p>
               </div>
               <div class="card-footer">
                 <small><b>Note:</b> Please don't enter <u>Personal or Sensitive Info</u>. Data maybe saved permanently and is accessible to everyone.</small>
@@ -122,65 +126,6 @@
     </section>
     <!-- Hero Ends -->
 
-    <!-- Features -->
-    <section id="services" class="services" style="display:none">
-      <div class="container">
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-futbol fa-5x" style="color: #ff689b;"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-futbol fa-5x"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-futbol fa-5x" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-futbol fa-5x" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-futbol fa-5x" style="color: #d6ff22;"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-futbol fa-5x" style="color: #4680ff;"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- Features Ends -->
-
     <!-- Reviews -->
     <section id="reviewsSection">
       <div class="container text-block" style="max-width:900px">
@@ -189,7 +134,7 @@
           <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#leaveReview" aria-expanded="false" aria-controls="leaveReview">Leave a review</button>
           <div class="collapse mt-4" id="leaveReview">
             <h5 class="mb-4">Leave a review</h5>
-            <form action="" method="post" class="form" id="contactform">
+            <form action="" method="post" class="form" id="reviewform">
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
@@ -220,7 +165,11 @@
                 <textarea class="form-control" rows="4" name="review" id="review" placeholder="Enter your review" required="required"></textarea>
               </div>
             </form>
-            <button class="btn btn-primary" onclick="addNewReview('contactform')">Post review</button>
+            <p>
+              <button class="btn btn-primary" onclick="addNewReview('reviewform')">Post review</button>
+              &nbsp;
+              powered by <a href="https://shubham99bisht.github.io/quickForms" target="_blank"><b style="background-color:blue;color:white">&nbsp; quickForms &nbsp;</b></a>
+            </p>
           </div>
         </div>
       </div>
