@@ -8,13 +8,9 @@
 
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script defer src="assets/vendor/fontawesome/all.min.js"></script>
+    <style media="screen">@media (max-width:750px) {#share{display: none}}</style>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-    <style media="screen">
-      @media (max-width:750px) {
-        #share{display: none}
-      }
-    </style>
 
     <!-- Firebase -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -36,6 +32,9 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     </script>
+    <!-- quickForms JS -->
+    <script src="../firebase.js" charset="utf-8"></script>
+    <script src="../main.js" charset="utf-8"></script>
   </head>
   <body>
 
@@ -75,7 +74,7 @@
           <div class="col-lg-6 center">
             <h1 style="font-family:Comfortaa"><u><b>quickForms</b></u></h1><br>
             <h3 style="font-family:Comfortaa">Secure & Simple way to build customs Forms on <u>Static Websites</u> using Firebase!</h3> <br>
-            <a class="btn btn-outline-primary mb-5" href="#reviews">Try Reviews form!</a> <br>
+            <a class="btn btn-outline-primary mb-5" href="#reviewsSection">Try Reviews form!</a> <br>
             <h5 style="font-family:Comfortaa" id="share">
               Please spread the word if you like quickForms! <br><br>
               <a href="facebook.com"><i class="fab fa-facebook fa-2x"></i></a> &nbsp;
@@ -183,14 +182,14 @@
     <!-- Features Ends -->
 
     <!-- Reviews -->
-    <section id="reviews">
+    <section id="reviewsSection">
       <div class="container text-block" style="max-width:900px">
         <h2 class="text-primary">Reviews</h2>
         <div class="pt-3 pb-5">
           <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#leaveReview" aria-expanded="false" aria-controls="leaveReview">Leave a review</button>
           <div class="collapse mt-4" id="leaveReview">
             <h5 class="mb-4">Leave a review</h5>
-            <form class="form" id="contact-form" method="get" action="#">
+            <form action="" method="post" class="form" id="contactform">
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
@@ -214,15 +213,18 @@
               <div class="form-group">
                 <label class="form-label" for="email">Your email</label>
                 <input class="form-control" type="email" name="email" id="email" placeholder="Enter your email (optional)">
+                <small id="emailHelp" class="form-text text-muted">Won't be displayed publicly, only for communication purpose if required.</small>
               </div>
               <div class="form-group">
                 <label class="form-label" for="review">Review text *</label>
                 <textarea class="form-control" rows="4" name="review" id="review" placeholder="Enter your review" required="required"></textarea>
               </div>
-              <button class="btn btn-primary" type="submit">Post review</button>
             </form>
+            <button class="btn btn-primary" onclick="addNewReview('contactform')">Post review</button>
           </div>
         </div>
+      </div>
+      <div class="container text-block" style="max-width:900px" id="reviews">
         <div class="media d-block d-sm-flex review">
           <div class="media-body">
             <h6 class="mt-2 mb-1">Padmé Amidala</h6>
@@ -242,7 +244,6 @@
         </div>
         <hr>
         <div class="media d-block d-sm-flex review">
-          <!-- <div class="text-md-center mr-4 mr-xl-5"><img class="d-block avatar avatar-xl p-2 mb-2" src="img/avatar/avatar-3.jpg" alt="Princess Leia"><span class="text-uppercase text-muted text-sm">Dec 2018</span></div> -->
           <div class="media-body">
             <h6 class="mt-2 mb-1">Princess Leia</h6>
             <div class="mb-2"><i class="fa fa-xs fa-star text-primary"></i><i class="fa fa-xs fa-star text-primary"></i><i class="fa fa-xs fa-star text-primary"></i><i class="fa fa-xs fa-star text-gray-200"></i><i class="fa fa-xs fa-star text-gray-200"></i>
@@ -258,4 +259,5 @@
   </body>
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/vendor/fontawesome/all.min.js"></script>
 </html>
