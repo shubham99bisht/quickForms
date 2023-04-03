@@ -20,21 +20,21 @@
 
     <script>
       // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyAktsOmabJ0O8aBRIQB1mcVZi0RrrDAfGI",
-        authDomain: "quickforms-aa4d2.firebaseapp.com",
-        databaseURL: "https://quickforms-aa4d2.firebaseio.com",
-        projectId: "quickforms-aa4d2",
-        storageBucket: "quickforms-aa4d2.appspot.com",
-        messagingSenderId: "253607695896",
-        appId: "1:253607695896:web:286ddab87456cbebbc156d"
+      const firebaseConfig = {
+        apiKey: "AIzaSyD8l15bnero17ooSJL2Be0XoCP8ZkRyh64",
+        authDomain: "quickforms-f199e.firebaseapp.com",
+        databaseURL: "https://quickforms-f199e-default-rtdb.firebaseio.com",
+        projectId: "quickforms-f199e",
+        storageBucket: "quickforms-f199e.appspot.com",
+        messagingSenderId: "940636816527",
+        appId: "1:940636816527:web:c8e607d3673f2147fb5cfa"
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     </script>
     <!-- quickForms JS -->
-    <script src="../firebase.js" charset="utf-8"></script>
-    <script src="../main.js" charset="utf-8"></script>
+    <script src="./assets/js/firebase.js" charset="utf-8"></script>
+    <script src="./assets/js/main.js" charset="utf-8"></script>
   </head>
   <body>
 
@@ -111,12 +111,10 @@
                 </form>
                 <p>
                   <button class="btn btn-primary" onclick="addContactData('contactform')">Submit</button>
-                  <a class="btn btn-primary" href="responses.html" target="_blank">See Responses</a>
-                  &nbsp;
-                  powered by <a href="https://shubham99bisht.github.io/quickForms" target="_blank"><b style="background-color:blue;color:white">&nbsp; quickForms &nbsp;</b></a>
                 </p>
               </div>
               <div class="card-footer">
+                <a class="btn btn-block btn-warning mb-2" href="responses.html" target="_blank">See Responses</a>
                 <small><b>Note:</b> Please don't enter <u>Personal or Sensitive Info</u>. Data maybe saved permanently and is accessible to everyone.</small>
               </div>
             </div>
